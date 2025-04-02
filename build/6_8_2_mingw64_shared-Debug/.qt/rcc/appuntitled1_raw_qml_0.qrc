@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="/untitled1/">
+    <file alias="Main.qml">C:/Users/li/Documents/untitled1/Main.qml</file>
+    <file alias="Display.qml">C:/Users/li/Documents/untitled1/Display.qml</file>
+    <file alias="Key.qml">C:/Users/li/Documents/untitled1/Key.qml</file>
+    <file alias="Buttons.qml">C:/Users/li/Documents/untitled1/Buttons.qml</file>
+    <file alias="Status.qml">C:/Users/li/Documents/untitled1/Status.qml</file>
+    <file alias="resources.qrc">C:/Users/li/Documents/untitled1/resources.qrc</file>
+    <file alias="qml.qrc">C:/Users/li/Documents/untitled1/qml.qrc</file>
+  </qresource>
+</RCC>
+

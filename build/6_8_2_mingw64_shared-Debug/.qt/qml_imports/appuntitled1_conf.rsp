@@ -1,0 +1,14 @@
+-rootPath
+C:/Users/li/Documents/untitled1
+-cmake-output
+-output-file
+C:/Users/li/Documents/untitled1/build/6_8_2_mingw64_shared-Debug/.qt/qml_imports/appuntitled1_conf.cmake
+-importPath
+C:/Users/li/Documents/untitled1/build/6_8_2_mingw64_shared-Debug/untitled1
+-importPath
+C:/Users/li/Documents/untitled1/build/6_8_2_mingw64_shared-Debug
+-importPath
+C:/msys64/mingw64/share/qt6/qml
+-qrcFiles
+C:/Users/li/Documents/untitled1/build/6_8_2_mingw64_shared-Debug/.qt/rcc/qmake_untitled1.qrc
+C:/Users/li/Documents/untitled1/build/6_8_2_mingw64_shared-Debug/.qt/rcc/appuntitled1_raw_qml_0.qrc

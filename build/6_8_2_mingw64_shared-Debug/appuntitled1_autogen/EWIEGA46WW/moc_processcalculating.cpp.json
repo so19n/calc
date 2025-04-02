@@ -1,0 +1,88 @@
+{
+    "classes": [
+        {
+            "className": "ProcessCalculating",
+            "lineNumber": 6,
+            "object": true,
+            "qualifiedClassName": "ProcessCalculating",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "resultNum",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "sendToQml",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "bN",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "sendToBeforeN",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "nN",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "sendToNowN",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 3,
+                    "name": "secretMenuActive",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "str",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 4,
+                    "name": "receiveFromQml",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "str",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 5,
+                    "name": "itIsSecret",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "processcalculating.h",
+    "outputRevision": 68
+}

@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Main.qml</file>
+        <file>Buttons.qml</file>
+        <file>Key.qml</file>
+        <file>Display.qml</file>
+        <file>Status.qml</file>
+    </qresource>
+</RCC>

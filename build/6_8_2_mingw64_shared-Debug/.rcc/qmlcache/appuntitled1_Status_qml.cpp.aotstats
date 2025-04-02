@@ -1,0 +1,28 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 20,
+                        "durationMicroseconds": 233,
+                        "errorMessage": "Cannot access value for name win",
+                        "functionName": "width",
+                        "line": 9
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 150,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 12
+                    }
+                ],
+                "filepath": "C:/Users/li/Documents/untitled1/Status.qml"
+            }
+        ],
+        "moduleId": "untitled1(appuntitled1)"
+    }
+]

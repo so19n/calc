@@ -1,0 +1,10 @@
+-I
+C:/Users/li/Documents/untitled1/build/6_8_2_mingw64_shared-Debug
+-I
+C:/msys64/mingw64/share/qt6/qml
+--resource
+C:/Users/li/Documents/untitled1/build/6_8_2_mingw64_shared-Debug/.qt/rcc/qmake_untitled1.qrc
+--resource
+C:/Users/li/Documents/untitled1/build/6_8_2_mingw64_shared-Debug/.qt/rcc/appuntitled1_raw_qml_0.qrc
+--module
+untitled1

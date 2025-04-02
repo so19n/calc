@@ -1,0 +1,9 @@
+module untitled1
+typeinfo appuntitled1.qmltypes
+prefer :/untitled1/
+Main 1.0 Main.qml
+Display 1.0 Display.qml
+Key 1.0 Key.qml
+Buttons 1.0 Buttons.qml
+Status 1.0 Status.qml
+
