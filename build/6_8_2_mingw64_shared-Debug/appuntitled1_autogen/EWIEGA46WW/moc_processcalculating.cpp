@@ -38,17 +38,16 @@ struct qt_meta_tag_ZN18ProcessCalculatingE_t {};
 #ifdef QT_MOC_HAS_STRINGDATA
 static constexpr auto qt_meta_stringdata_ZN18ProcessCalculatingE = QtMocHelpers::stringData(
     "ProcessCalculating",
-    "sendToQml",
-    "",
-    "resultNum",
-    "sendToBeforeN",
-    "bN",
     "sendToNowN",
-    "nN",
+    "",
+    "sendToBeforeN",
+    "sendToQml",
     "secretMenuActive",
     "receiveFromQml",
     "str",
-    "itIsSecret"
+    "itIsSecret",
+    "formatNumber",
+    "num"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -60,7 +59,7 @@ Q_CONSTINIT static const uint qt_meta_data_ZN18ProcessCalculatingE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -68,24 +67,26 @@ Q_CONSTINIT static const uint qt_meta_data_ZN18ProcessCalculatingE[] = {
        4,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   50,    2, 0x06,    1 /* Public */,
-       4,    1,   53,    2, 0x06,    3 /* Public */,
-       6,    1,   56,    2, 0x06,    5 /* Public */,
-       8,    0,   59,    2, 0x06,    7 /* Public */,
+       1,    1,   56,    2, 0x06,    1 /* Public */,
+       3,    1,   59,    2, 0x06,    3 /* Public */,
+       4,    1,   62,    2, 0x06,    5 /* Public */,
+       5,    0,   65,    2, 0x06,    7 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       9,    1,   60,    2, 0x0a,    8 /* Public */,
-      11,    1,   63,    2, 0x0a,   10 /* Public */,
+       6,    1,   66,    2, 0x0a,    8 /* Public */,
+       8,    1,   69,    2, 0x0a,   10 /* Public */,
+       9,    1,   72,    2, 0x0a,   12 /* Public */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::Double,    3,
-    QMetaType::Void, QMetaType::QString,    5,
-    QMetaType::Void, QMetaType::QString,    7,
+    QMetaType::Void, QMetaType::QString,    2,
+    QMetaType::Void, QMetaType::QString,    2,
+    QMetaType::Void, QMetaType::QString,    2,
     QMetaType::Void,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QString,   10,
-    QMetaType::Void, QMetaType::QString,   10,
+    QMetaType::Void, QMetaType::QString,    7,
+    QMetaType::Void, QMetaType::QString,    7,
+    QMetaType::QString, QMetaType::Double,   10,
 
        0        // eod
 };
@@ -99,13 +100,13 @@ Q_CONSTINIT const QMetaObject ProcessCalculating::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_tag_ZN18ProcessCalculatingE_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<ProcessCalculating, std::true_type>,
-        // method 'sendToQml'
+        // method 'sendToNowN'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<double, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'sendToBeforeN'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
-        // method 'sendToNowN'
+        // method 'sendToQml'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'secretMenuActive'
@@ -115,7 +116,10 @@ Q_CONSTINIT const QMetaObject ProcessCalculating::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'itIsSecret'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'formatNumber'
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<double, std::false_type>
     >,
     nullptr
 } };
@@ -125,20 +129,22 @@ void ProcessCalculating::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
     auto *_t = static_cast<ProcessCalculating *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->sendToQml((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 0: _t->sendToNowN((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 1: _t->sendToBeforeN((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 2: _t->sendToNowN((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 2: _t->sendToQml((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 3: _t->secretMenuActive(); break;
         case 4: _t->receiveFromQml((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 5: _t->itIsSecret((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 6: { QString _r = _t->formatNumber((*reinterpret_cast< std::add_pointer_t<double>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _q_method_type = void (ProcessCalculating::*)(double );
-            if (_q_method_type _q_method = &ProcessCalculating::sendToQml; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
+            using _q_method_type = void (ProcessCalculating::*)(QString );
+            if (_q_method_type _q_method = &ProcessCalculating::sendToNowN; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
@@ -152,7 +158,7 @@ void ProcessCalculating::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         }
         {
             using _q_method_type = void (ProcessCalculating::*)(QString );
-            if (_q_method_type _q_method = &ProcessCalculating::sendToNowN; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
+            if (_q_method_type _q_method = &ProcessCalculating::sendToQml; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 2;
                 return;
             }
@@ -186,20 +192,20 @@ int ProcessCalculating::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 7;
     }
     return _id;
 }
 
 // SIGNAL 0
-void ProcessCalculating::sendToQml(double _t1)
+void ProcessCalculating::sendToNowN(QString _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
@@ -213,7 +219,7 @@ void ProcessCalculating::sendToBeforeN(QString _t1)
 }
 
 // SIGNAL 2
-void ProcessCalculating::sendToNowN(QString _t1)
+void ProcessCalculating::sendToQml(QString _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 2, _a);

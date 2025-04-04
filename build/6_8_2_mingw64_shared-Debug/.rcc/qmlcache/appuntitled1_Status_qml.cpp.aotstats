@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 233,
+                        "durationMicroseconds": 225,
                         "errorMessage": "Cannot access value for name win",
                         "functionName": "width",
                         "line": 9
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 150,
+                        "durationMicroseconds": 185,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 12

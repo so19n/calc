@@ -187,7 +187,6 @@ C:/Users/li/Documents/untitled1/build/6_8_2_mingw64_shared-Debug/appuntitled1_au
   C:/msys64/mingw64/include/pthread_time.h \
   C:/msys64/mingw64/include/pthread_unistd.h \
   C:/msys64/mingw64/include/qt6/QtCore/QObject \
-  C:/msys64/mingw64/include/qt6/QtCore/QString \
   C:/msys64/mingw64/include/qt6/QtCore/QTimer \
   C:/msys64/mingw64/include/qt6/QtCore/q20functional.h \
   C:/msys64/mingw64/include/qt6/QtCore/q20memory.h \

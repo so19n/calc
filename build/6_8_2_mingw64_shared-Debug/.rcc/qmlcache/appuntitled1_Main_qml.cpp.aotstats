@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 126,
+                        "durationMicroseconds": 155,
                         "errorMessage": "Cannot access value for name processCalculating",
                         "functionName": "target",
                         "line": 33
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 9,
-                        "durationMicroseconds": 41,
+                        "durationMicroseconds": 40,
                         "errorMessage": "Cannot retrieve a non-object type by ID: secretmenu",
                         "functionName": "onSecretMenuActive",
                         "line": 34

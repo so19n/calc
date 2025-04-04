@@ -2,7 +2,7 @@
     "classes": [
         {
             "className": "ProcessCalculating",
-            "lineNumber": 6,
+            "lineNumber": 7,
             "object": true,
             "qualifiedClassName": "ProcessCalculating",
             "signals": [
@@ -10,19 +10,17 @@
                     "access": "public",
                     "arguments": [
                         {
-                            "name": "resultNum",
-                            "type": "double"
+                            "type": "QString"
                         }
                     ],
                     "index": 0,
-                    "name": "sendToQml",
+                    "name": "sendToNowN",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
                     "arguments": [
                         {
-                            "name": "bN",
                             "type": "QString"
                         }
                     ],
@@ -34,12 +32,11 @@
                     "access": "public",
                     "arguments": [
                         {
-                            "name": "nN",
                             "type": "QString"
                         }
                     ],
                     "index": 2,
-                    "name": "sendToNowN",
+                    "name": "sendToQml",
                     "returnType": "void"
                 },
                 {
@@ -73,6 +70,18 @@
                     "index": 5,
                     "name": "itIsSecret",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "num",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 6,
+                    "name": "formatNumber",
+                    "returnType": "QString"
                 }
             ],
             "superClasses": [

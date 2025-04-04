@@ -13,7 +13,7 @@ GridLayout{
                     buttonIcon: "qrc:/images/bkt.png"
                 }
                 Buttons {
-                    buttonText: qsTr("+/-")
+                    buttonText: qsTr("±")
                     buttonIcon: "qrc:/images/plus_minus.png"
                 }
                 Buttons {
@@ -34,7 +34,7 @@ GridLayout{
                     buttonText: qsTr("9")
                 }
                 Buttons {
-                    buttonText: qsTr("x")
+                    buttonText: qsTr("*")
                     buttonIcon: "qrc:/images/multiplication.png"
                 }
                 Buttons {

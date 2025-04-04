@@ -1,13 +1,12 @@
 #include "processcalculating.h"
 #include <QDebug>
 #include <QRegularExpression>
-#include <iomanip>
+#include <QJSEngine>
 
 ProcessCalculating::ProcessCalculating(QObject *parent) : QObject(parent)
 {
     resultNum = 0;
-    bN = "";
-    nN = "";
+    expression = "";
     timer.setInterval(5000);
     secretCode = "";
 }
@@ -32,55 +31,127 @@ void ProcessCalculating::receiveFromQml(QString str)
         }
     }
 
-    static QMap<QString, std::function<double(double, double)>> operations = {
-        {"+", [](double a, double b) { return a + b; }},
-        {"-", [](double a, double b) { return a - b; }},
-        {"x", [](double a, double b) { return a * b; }},
-        {"/", [](double a, double b) { return (b != 0) ? a / b : 0; }}
-    };
+    if (str == "()")
+    {
+        int open = expression.count("(");
+        int close = expression.count(")");
+        if (open > close)
+            expression += ")";
+        else
+            expression += "(";
+
+        emit sendToNowN(expression);
+        return;
+    }
 
     if (str.contains(QRegularExpression("^[0-9.]$")))
     {
-        nN += str;
-        emit sendToNowN(nN);
+        expression += str;
+        updateDisplay();
+        return;
     }
-    else if (operations.contains(str))
+
+    if (str.contains(QRegularExpression("[+\\-*/]$")))
     {
-        operation = str;
-        bN = nN;
-        nN = "";
-        emit sendToBeforeN(bN);
+        if (!expression.isEmpty() && expression.right(1).contains(QRegularExpression("[+\\-*/]")))
+        {
+            expression.chop(1);
+        }
+        expression += str;
+
+        emit sendToBeforeN(expression);
         emit sendToNowN("0");
+        return;
     }
-    else if (str == "+/-" && nN != "0")
-    {
-        nN = QString::number(nN.toDouble() * -1);
-        emit sendToNowN(nN);
-    }
-    else if (str == "%")
-    {
-        nN = QString::number(nN.toDouble() * 0.01);
-        emit sendToNowN(nN);
-    }
+
     else if (str == "C")
     {
-        bN = "";
-        nN = "";
+        expression = "";
         emit sendToBeforeN("");
         emit sendToNowN("0");
     }
-    else if (str == "=" && operations.contains(operation))
+
+    else if (str == "±" && !expression.isEmpty())
     {
-        resultNum = operations[operation](bN.toDouble(), nN.toDouble());
-        QString resultStr = QString::number(resultNum, 'f', 6);
+        QRegularExpression re("([\\-]?[0-9.]+)$");
+        QRegularExpressionMatch match = re.match(expression);
 
-        resultStr.remove(QRegularExpression("(\\.\\d*?[1-9])0+$"));
-        resultStr.remove(QRegularExpression("\\.$"));
+        if (match.hasMatch())
+        {
+            QString lastNumber = match.captured(1);
+            double negated = -lastNumber.toDouble();
+            QString newNumber = formatNumber(negated);
 
-        nN = resultStr;
-        bN = nN;
+            expression.chop(lastNumber.length());
+            expression += newNumber;
 
-        emit sendToBeforeN("");
-        emit sendToQml(nN.toDouble());
+            emit sendToBeforeN("");
+            emit sendToNowN(expression);
+        }
     }
+
+
+    else if (str == "%")
+    {
+        QJSEngine engine;
+        QJSValue result = engine.evaluate("(" + expression + ") * 0.01");
+
+        if (!result.isError())
+        {
+            expression = formatNumber(result.toNumber());
+            emit sendToNowN(expression);
+        }
+    }
+
+    else if (str == "=")
+    {
+        QJSEngine engine;
+
+        QString cleaned = expression;
+        cleaned.remove(QRegularExpression("[+\\-*/]+$"));
+
+        QJSValue result = engine.evaluate(cleaned);
+
+        if (!result.isError())
+        {
+            QString resultStr = formatNumber(result.toNumber());
+
+            emit sendToBeforeN(expression);
+            emit sendToNowN(resultStr);
+
+            expression = resultStr;
+        }
+
+        else
+        {
+            emit sendToBeforeN("Ошибка");
+            emit sendToNowN("0");
+        }
+    }
+}
+
+void ProcessCalculating::updateDisplay()
+{
+    QRegularExpression re("([0-9.]+)$");
+    QRegularExpressionMatch match = re.match(expression);
+
+    if (match.hasMatch())
+    {
+        QString lastNumber = match.captured(1);
+        QString beforeExpr = expression;
+        beforeExpr.chop(lastNumber.length());
+
+        emit sendToBeforeN(beforeExpr);
+        emit sendToNowN(lastNumber);
+    }
+    else
+    {
+        emit sendToBeforeN(expression);
+        emit sendToNowN("0");
+    }
+}
+
+QString ProcessCalculating::formatNumber(double num)
+{
+    return QString::number(num, 'g', 10);
 }

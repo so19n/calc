@@ -11,6 +11,7 @@ qt_add_resources(RESOURCES resources.qrc)
 
 qt_add_executable(appuntitled1
     main.cpp
+    processcalculating.cpp
     ${RESOURCES}
 )
 

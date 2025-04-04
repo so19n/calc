@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 248,
+                        "durationMicroseconds": 207,
                         "errorMessage": "Cannot access value for name win",
                         "functionName": "width",
                         "line": 7
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 407,
+                        "durationMicroseconds": 206,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 17
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 193,
+                        "durationMicroseconds": 165,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 23
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 140,
+                        "durationMicroseconds": 133,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 24
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 76,
+                        "durationMicroseconds": 126,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 25
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 89,
+                        "durationMicroseconds": 79,
                         "errorMessage": "",
                         "functionName": "elide",
                         "line": 39
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 80,
+                        "durationMicroseconds": 65,
                         "errorMessage": "",
                         "functionName": "wrapMode",
                         "line": 41
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 117,
+                        "durationMicroseconds": 120,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 33
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 155,
+                        "durationMicroseconds": 148,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 48
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 130,
+                        "durationMicroseconds": 103,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 49
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 55,
                         "errorMessage": "Cannot access value for name processCalculating",
                         "functionName": "target",
                         "line": 58
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 40,
+                        "durationMicroseconds": 39,
                         "errorMessage": "Cannot access value for name processCalculating",
                         "functionName": "target",
                         "line": 64
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 33,
+                        "durationMicroseconds": 31,
                         "errorMessage": "Cannot access value for name processCalculating",
                         "functionName": "target",
                         "line": 70
