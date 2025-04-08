@@ -29,6 +29,8 @@ private:
     QTimer timer;
     QString secretCode;
     void updateDisplay();
+    bool secretInputMode;
+
 };
 
 #endif // PROCESSCALCULATING_H

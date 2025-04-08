@@ -9,27 +9,43 @@ ProcessCalculating::ProcessCalculating(QObject *parent) : QObject(parent)
     expression = "";
     timer.setInterval(5000);
     secretCode = "";
+    secretInputMode = false;
+
 }
 
 void ProcessCalculating::itIsSecret(QString str)
 {
     if (str == "=")
     {
-        timer.start();
+        secretCode = "";
+        secretInputMode = true;
     }
 }
 
+
 void ProcessCalculating::receiveFromQml(QString str)
 {
-    if (timer.isActive())
+    if (secretInputMode)
     {
+        if (str == "=") return;
+
         secretCode += str;
+
         if (secretCode == "123")
         {
             emit secretMenuActive();
             secretCode = "";
+            secretInputMode = false;
         }
+        else if (secretCode.length() >= 3)
+        {
+            secretCode = "";
+            secretInputMode = false;
+        }
+
+        return;
     }
+
 
     if (str == "()")
     {
