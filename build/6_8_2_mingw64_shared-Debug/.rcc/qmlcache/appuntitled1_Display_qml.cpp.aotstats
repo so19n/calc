@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 207,
+                        "durationMicroseconds": 170,
                         "errorMessage": "Cannot access value for name win",
                         "functionName": "width",
                         "line": 7
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 206,
+                        "durationMicroseconds": 175,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 17
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 165,
+                        "durationMicroseconds": 163,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 23
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 133,
+                        "durationMicroseconds": 114,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 24
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 126,
+                        "durationMicroseconds": 61,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 25
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 79,
+                        "durationMicroseconds": 66,
                         "errorMessage": "",
                         "functionName": "elide",
                         "line": 39
@@ -54,23 +54,23 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 65,
+                        "durationMicroseconds": 64,
                         "errorMessage": "",
                         "functionName": "wrapMode",
                         "line": 41
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 29,
-                        "durationMicroseconds": 120,
+                        "column": 28,
+                        "durationMicroseconds": 147,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 33
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 30,
-                        "durationMicroseconds": 102,
+                        "column": 29,
+                        "durationMicroseconds": 92,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 34
@@ -78,39 +78,71 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 148,
+                        "durationMicroseconds": 603,
+                        "errorMessage": "",
+                        "functionName": "pixelSize",
+                        "line": 43
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 20,
+                        "durationMicroseconds": 113,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 55
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 21,
+                        "durationMicroseconds": 126,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 56
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 23,
+                        "durationMicroseconds": 60,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 57
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 20,
+                        "durationMicroseconds": 61,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 59
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 34,
+                        "durationMicroseconds": 51,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 60
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 28,
+                        "durationMicroseconds": 90,
                         "errorMessage": "",
                         "functionName": "right",
-                        "line": 48
+                        "line": 52
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 103,
+                        "durationMicroseconds": 86,
                         "errorMessage": "",
                         "functionName": "bottom",
-                        "line": 49
+                        "line": 53
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 55,
-                        "errorMessage": "Cannot access value for name processCalculating",
-                        "functionName": "target",
-                        "line": 58
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 9,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Functions without type annotations won't be compiled",
-                        "functionName": "onSendToQml",
-                        "line": 59
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 17,
-                        "durationMicroseconds": 39,
+                        "durationMicroseconds": 40,
                         "errorMessage": "Cannot access value for name processCalculating",
                         "functionName": "target",
                         "line": 64
@@ -120,13 +152,13 @@
                         "column": 9,
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
-                        "functionName": "onSendToBeforeN",
+                        "functionName": "onSendToQml",
                         "line": 65
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 31,
+                        "durationMicroseconds": 36,
                         "errorMessage": "Cannot access value for name processCalculating",
                         "functionName": "target",
                         "line": 70
@@ -136,8 +168,24 @@
                         "column": 9,
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
-                        "functionName": "onSendToNowN",
+                        "functionName": "onSendToBeforeN",
                         "line": 71
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 17,
+                        "durationMicroseconds": 28,
+                        "errorMessage": "Cannot access value for name processCalculating",
+                        "functionName": "target",
+                        "line": 76
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 9,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Functions without type annotations won't be compiled",
+                        "functionName": "onSendToNowN",
+                        "line": 77
                     }
                 ],
                 "filepath": "C:/Users/li/Documents/untitled1/Display.qml"

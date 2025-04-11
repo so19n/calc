@@ -26,12 +26,12 @@ Rectangle
                 color : "#04BFAD"
                 }
         }
-        Text {
+        Text
+        {
             id: nowN
             color: "white"
-            font.pixelSize: 45
-            anchors.right : parent.right
-            anchors.bottom : parent.bottom
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
             anchors.rightMargin: 35
             anchors.topMargin: 35
             text: "0"
@@ -40,19 +40,25 @@ Rectangle
             maximumLineCount: 1
             wrapMode: Text.NoWrap
             clip: true
+            font.pixelSize: Math.max(20, 45 - (text.length > 8 ? text.length - 8 : 0) * 2)
         }
-        Text {
+        Text
+        {
             id: beforeN
+            text: ""
             font.pixelSize: 24
+            font.family: "Open Sans Semibold"
             color: "white"
-            anchors.right : parent.right
+            anchors.right: parent.right
             anchors.bottom: nowN.top
             anchors.rightMargin: 35
-            text: ""
-            font.family: "Open Sans Semibold"
+            width: parent.width - 70
+            height: font.pixelSize * 2.5
+            wrapMode: Text.Wrap
+            maximumLineCount: 2
+            elide: Text.ElideNone
+            horizontalAlignment: Text.AlignRight
         }
-
-
 
     Connections {
         target: processCalculating
@@ -72,6 +78,4 @@ Rectangle
             nowN.text = nN;
         }
     }
-
-
 }

@@ -62,10 +62,19 @@ void ProcessCalculating::receiveFromQml(QString str)
 
     if (str.contains(QRegularExpression("^[0-9.]$")))
     {
+        QRegularExpression re("([0-9.]+)$");
+        QRegularExpressionMatch match = re.match(expression);
+        if (match.hasMatch()) {
+            QString lastNumber = match.captured(1);
+            if (lastNumber.length() >= 12)
+                return;
+        }
+
         expression += str;
         updateDisplay();
         return;
     }
+
 
     if (str.contains(QRegularExpression("[+\\-*/]$")))
     {
